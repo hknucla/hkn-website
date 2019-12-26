@@ -1,4 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# HKN Website Frontend
+
+## Requirements
+
+React should be already installed, so just clone the repository, run ```yarn``` in the hkn-frontend directory to install the dependencies, and run ```yarn start``` to run in development mode.
+
+## What to work on 
+
+Please see the frontend project in Projects tab on github for specific tabs.
+
+There are folders within ```src/Components``` that should have the component you are working on.  Feel free to create more components within YOUR folder to help with your page. 
+
+Please follow the general pattern in our wire frame: https://www.figma.com/file/JGVUi5ahX6GYjZiLAFYT1H/HKN-WEBSITE?node-id=1%3A2
+
+## Styling
+
+The styling can come later, just make sure to have important information displayed. It doesn't have to be pretty for now.
+
+For styling, I recommend using SASS instead of pure css, which will make your styling a lot easier. 
+Simply use the .scss extension to make a SASS styling file and include it in your component like you would a regular css file.  It is basically cleaner css. 
+
+## Pushing your work
+
+Please make a branch with your name and make a pull request when you have accomplished a specific task listed. 
 
 ## Available Scripts
 
