@@ -1,7 +1,15 @@
 .header {
-  width: 100%;
+  width: 120%;
+  z-index: 3;
   display: flex;
+  height: 100px;
+  background-color: white;
+  flex-direction: row;
+  margin-top: -10px;
+  margin-left: -15px;
+  position: absolute;
   .title {
+    display: inline-block;
     font-family: Roboto Condensed;
     font-style: normal;
     font-weight: normal;
