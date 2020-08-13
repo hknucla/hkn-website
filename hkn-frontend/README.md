@@ -1,28 +1,4 @@
-
-# HKN Website Frontend
-
-## Requirements
-
-React should be already installed, so just clone the repository, run ```yarn``` in the hkn-frontend directory to install the dependencies, and run ```yarn start``` to run in development mode.
-
-## What to work on 
-
-Please see the frontend project in Projects tab on github for specific tabs.
-
-There are folders within ```src/Components``` that should have the component you are working on.  Feel free to create more components within YOUR folder to help with your page. 
-
-Please follow the general pattern in our wire frame: https://www.figma.com/file/JGVUi5ahX6GYjZiLAFYT1H/HKN-WEBSITE?node-id=1%3A2
-
-## Styling
-
-The styling can come later, just make sure to have important information displayed. It doesn't have to be pretty for now.
-
-For styling, I recommend using SASS instead of pure css, which will make your styling a lot easier. 
-Simply use the .scss extension to make a SASS styling file and include it in your component like you would a regular css file.  It is basically cleaner css. 
-
-## Pushing your work
-
-Please make a branch with your name and make a pull request when you have accomplished a specific task listed. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -57,7 +33,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
