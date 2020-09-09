@@ -15,7 +15,7 @@ const Notfound = () => <h1>Route not found</h1>;
 export default class Header extends Component {
   render() {
     return (
-      <div>
+      <div className="app">
         <Router>
             <div className="header">
               <li><Link to="/aboutUs"><img src={MAINICON} style={{height: '75px', width: '300px' }}/></Link></li>
