@@ -1,0 +1,39 @@
+.app{
+  margin: -10px;
+  padding: 0;
+}
+
+.header {
+  z-index: 4;
+  display: flex;
+  height: 100px;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    display: inline-block;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+  }
+  .links {
+    ul li {
+      display: inline-block;
+      margin-right: 40px;
+      font-family: "Century Gothic", sans-serif;
+      font-weight: 100;
+      font-size: 17px;
+    }
+  }
+  .link{
+    text-decoration: none;
+    color: black;
+  }
+  .link:active{
+    outline: 1px solid black; 
+  }
+}
+
