@@ -1,0 +1,128 @@
+@viewport{
+    width: device-width;
+    zoom:1.0;
+}
+
+@mixin boxFormatting($maxw, $maxh){
+    box-shadow: 5px 5px 7px gray;
+    padding: 10px;
+    max-width: $maxw;
+    max-height: $maxh;
+    margin: 1%;
+    text-align: center;
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+}
+
+.MemberAgenda{
+    @include boxFormatting(500px,100%);
+    width: 375px;
+    height: 600px;
+    position: relative;
+}
+.agendaWrapper{
+    overflow: scroll;
+    max-height: 550px;
+}
+@mixin iconButton($bc){
+    background-color: $bc;
+    border-radius: 50%;
+    border: 0px;
+    outline:0;
+    opacity:1;
+    & :hover{box-shadow: 2px 2px 5px gray;}
+    & :active{box-shadow: 1px 1px 1px gray;}
+}
+.addEvent{@include iconButton(white); position: absolute; top: 10px; right: 10px;}
+.eventCardButton{@include iconButton(#ace600);}
+.events{
+    border-radius: 10px;
+    border: 0px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    margin: 10px;
+    text-align: start;
+    background-color: #ace600;
+    width: 95%;
+    height: 100px;
+    outline:0;
+    transition: all 400ms ease;
+    overflow: hidden;
+    display: table;
+    vertical-align: center;
+}
+.events:focus,.events:focus-within{
+    box-shadow: 4px 4px 7px gray;
+    height: 200px;
+}
+.events:hover:not(:focus){
+    box-shadow: 4px 4px 7px gray;
+    transform: scale(1.001);
+}
+.eventsOpts{
+    width: 100%; 
+    display: table;
+    visibility: collapse;
+    opacity: 1;
+}
+.events,.events:focus-within .eventsOpts{visibility: visible; opacity: 1;}
+
+
+.InducteeTodo{
+    @include boxFormatting(400px,500px);
+    width: 400px;
+}
+.InducteeContents{
+    text-align: left;
+    overflow: scroll;
+}
+
+.MemberPoints{
+    @include boxFormatting(250px,250px);
+    overflow-x: scroll;
+}
+
+.MemberPortal{
+    height: 100%;
+    width: 100%;
+    background-color: #F2f2f2;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.Boxes{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    background-color: #F2f2f2;
+
+    //hkn.ucla@gmail.com
+    //hknmip2018
+}
+
+.EventSignup{
+    @include boxFormatting(100%,400px);
+    grid-column: 1 /span 3;
+    grid-row-start: 2;
+}
+.EventSignupInside{
+    overflow-x: scroll;
+    max-height: 300px;
+}
+h1{font-family: 'Lato', sans-serif; margin-top: -5px;}
+h2{
+    margin-top:0px;
+    margin-bottom: 10px;
+}
+h3{
+    margin-bottom: 2px;
+}
+.tinytext{
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+}
+button{
+    background-color: white;
+}
