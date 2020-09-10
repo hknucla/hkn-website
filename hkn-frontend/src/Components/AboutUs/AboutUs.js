@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ROYCE from './royce.jpeg'
 import GROUP from './group.png'
 import './AboutUs.scss'
+import UpcomingEvents from './UpcomingEvents'
 
 export default class AboutUs extends Component {
     render() {
@@ -37,6 +38,9 @@ export default class AboutUs extends Component {
                     </div>
                     <img className="GroupShot" src={GROUP} />
                 </div>    
+                <div>
+                    <UpcomingEvents/>
+                </div>
             </div>
         )
     }

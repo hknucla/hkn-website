@@ -9,6 +9,7 @@ import MAINPAGE from "./mainpage.jpg";
 import "./App.scss";
 import MAINICON from "./mainIcon.png"
 import TestBank from "./Components/TestBank/TestBank";
+import UpcomingEvents from "./Components/AboutUs/UpcomingEvents";
 
 const Notfound = () => <h1>Route not found</h1>;
 
@@ -16,7 +17,7 @@ export default class Header extends Component {
   render() {
     return (
       <div className="app">
-        <Router>
+        {/* <Router>
             <div className="header">
               <li><Link to="/aboutUs"><img src={MAINICON} style={{height: '75px', width: '300px' }}/></Link></li>
               <div className="links">
@@ -30,13 +31,15 @@ export default class Header extends Component {
               </div>
             </div>
           <Switch>
+            <Route path="/" component={AboutUs} />
             <Route path="/events" component={Events} />
             <Route path="/aboutUs" component={AboutUs} />
             <Route path="/tutoring" component={Tutoring} />
             <Route path="/testBank" component={TestBank} />
             <Route path="/member" component={MemberPortal} />
           </Switch>
-        </Router>
+        </Router> */}
+        <UpcomingEvents></UpcomingEvents>
       </div>
     );
   }
