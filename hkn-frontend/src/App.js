@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Homepage from "./Components/Homepage/Homepage";
 import Events from "./Components/Events/Events";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Tutoring from "./Components/Tutoring/Tutoring";
@@ -9,7 +8,6 @@ import MAINPAGE from "./mainpage.jpg";
 import "./App.scss";
 import MAINICON from "./mainIcon.png"
 import TestBank from "./Components/TestBank/TestBank";
-import UpcomingEvents from "./Components/AboutUs/UpcomingEvents";
 
 const Notfound = () => <h1>Route not found</h1>;
 
