@@ -17,7 +17,7 @@ export default class Header extends Component {
   render() {
     return (
       <div className="app">
-        {/* <Router>
+        <Router>
             <div className="header">
               <li><Link to="/aboutUs"><img src={MAINICON} style={{height: '75px', width: '300px' }}/></Link></li>
               <div className="links">
@@ -38,8 +38,7 @@ export default class Header extends Component {
             <Route path="/testBank" component={TestBank} />
             <Route path="/member" component={MemberPortal} />
           </Switch>
-        </Router> */}
-        <UpcomingEvents></UpcomingEvents>
+        </Router>
       </div>
     );
   }

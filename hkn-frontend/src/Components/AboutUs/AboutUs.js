@@ -38,7 +38,8 @@ export default class AboutUs extends Component {
                     </div>
                     <img className="GroupShot" src={GROUP} />
                 </div>    
-                <div>
+                <div className="UpcomingEventsComponent">
+                    <b>Upcoming Events</b><br /> 
                     <UpcomingEvents/>
                 </div>
             </div>
