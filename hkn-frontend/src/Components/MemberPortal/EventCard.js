@@ -5,18 +5,6 @@ import PROFESSIONAL from "./work.png"
 import SOCIAL from "./smile.png"
 import TRASH from "./trash.png"
 
-// class ExpandedRecord extends Component{
-//     render(){
-//         return(
-//             <div>
-//                 Hello?
-//                 Is something there
-//             </div>
-//         );
-//     }
-// }
-
-
 export default class EventCard extends Component {
     constructor(){
         super();

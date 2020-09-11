@@ -1,4 +1,6 @@
-
+.AboutUs{
+    background-color: black;
+}
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 .ImageContainer{
     width: 100%;
@@ -54,4 +56,15 @@
         outline-offset: 10px;
     }
     
+}
+
+.UpcomingEventsComponent{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 6vh;
+    text-align: center;
+    color: white;
 }
