@@ -26,25 +26,33 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@mixin titleFont{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 6vh;
+}
+@mixin textFont{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+}
+
 .About{
     z-index: 3;
     background-color: black;
     color: white;
     display: grid;
     grid-template-columns: 5% 35% 10% 45% 5%;
-    grid-template-rows: 100px 70px auto 100px;
+    grid-template-rows: 100px 80px auto 100px;
     .AboutTitle{
+        @include titleFont;
         grid-column-start: 2;
         grid-row-start: 2;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 6vh;
     }
     .AboutText{
+        @include textFont;
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 3;
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 18px;
     }
     .GroupShot{
         margin-top: -50px;
@@ -63,8 +71,34 @@
     margin-left: 5%;
     margin-right: 5%;
     background-color: black;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 6vh;
     text-align: center;
-    color: white;
+    @include titleFont;
+}
+
+.TutoringComponent{
+    @include titleFont;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 5% 45% 40% 10%;
+    grid-template-rows: 120px 80px 80px auto 100px;
+    .TutoringTitle{
+        grid-row-start: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .TutoringText{
+        @include textFont;
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .TutoringImage{
+        grid-row-start: 2;
+        grid-row-end: 6;
+        grid-column-start: 1; 
+        grid-column-end: 3;
+        margin-left: -100px;
+        width: 90%;
+    }
+    
 }
