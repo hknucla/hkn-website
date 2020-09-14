@@ -6,13 +6,18 @@ class UpcomingEventsCard extends Component{
         return(
             
             <div className="UpcomingEvent">
-                <img src={this.props.image} className="UpcomingEventImage"/>
-                <div className="UpcomingEventText">
-                    {this.props.date} < br />
-                    <b className="UpcomingEventBigText">
-                        {this.props.name}
-                    </b> < br />
-                    {this.props.time} | {this.props.loc}< br />
+                <img src={this.props.image} className="UpcomingEventImage" />
+                <div className="UpcomingEventTextWrapper">
+                    <br /> 
+                    <div className="UpcomingEventText">
+                        {this.props.date} < br />
+                        <b className="UpcomingEventBigText">
+                            {this.props.name}
+                        </b> < br />
+                        {this.props.time} | {this.props.loc}< br />
+                    </div>
+                    <br /> 
+
                 </div>
             </div>
         )

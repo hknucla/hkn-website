@@ -80,7 +80,7 @@
     background-color: black;
     display: grid;
     grid-template-columns: 5% 45% 40% 10%;
-    grid-template-rows: 120px 80px 80px auto 100px;
+    grid-template-rows: 100px 80px 80px auto 100px;
     .TutoringTitle{
         grid-row-start: 3;
         grid-column-start: 3;
@@ -97,7 +97,7 @@
         grid-row-end: 6;
         grid-column-start: 1; 
         grid-column-end: 3;
-        margin-left: -100px;
+        margin-left: -10vh;
         width: 90%;
     }
     
