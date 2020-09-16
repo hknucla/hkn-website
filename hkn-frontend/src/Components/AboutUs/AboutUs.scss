@@ -55,7 +55,7 @@
         grid-row-start: 3;
     }
     .GroupShot{
-        margin-top: -50px;
+        margin-top: -5vh;
         grid-column-start: 4;
         width: 100%;
         height: auto;
@@ -80,7 +80,7 @@
     background-color: black;
     display: grid;
     grid-template-columns: 5% 45% 40% 10%;
-    grid-template-rows: 120px 80px 80px auto 100px;
+    grid-template-rows: 100px 80px 80px auto 100px;
     .TutoringTitle{
         grid-row-start: 3;
         grid-column-start: 3;
@@ -97,8 +97,27 @@
         grid-row-end: 6;
         grid-column-start: 1; 
         grid-column-end: 3;
-        margin-left: -100px;
+        margin-left: -10vh;
         width: 90%;
     }
     
+}
+
+.GalleryComponent{
+    width: 100%;
+    background-color: black;
+    @include titleFont;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 60px 6vh 350px 70px; 
+    .GalleryTitle{
+        grid-row-start: 2;
+        z-index: 1;
+    }
+    .Gallery{
+        margin-left: 5%;
+        margin-right: 5%;
+        grid-row-start: 3;
+        width: 90%;
+    }
 }

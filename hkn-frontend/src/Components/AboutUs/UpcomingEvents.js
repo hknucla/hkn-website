@@ -6,13 +6,18 @@ class UpcomingEventsCard extends Component{
         return(
             
             <div className="UpcomingEvent">
-                <img src={this.props.image} className="UpcomingEventImage"/>
-                <div className="UpcomingEventText">
-                    {this.props.date} < br />
-                    <b className="UpcomingEventBigText">
-                        {this.props.name}
-                    </b> < br />
-                    {this.props.time} | {this.props.loc}< br />
+                <img src={this.props.image} className="UpcomingEventImage" />
+                <div className="UpcomingEventTextWrapper">
+                    <br /> 
+                    <div className="UpcomingEventText">
+                        {this.props.date} < br />
+                        <b className="UpcomingEventBigText">
+                            {this.props.name}
+                        </b> < br />
+                        {this.props.time} | {this.props.loc}< br />
+                    </div>
+                    <br /> 
+
                 </div>
             </div>
         )
@@ -37,9 +42,8 @@ export default class UpcomingEvents extends Component {
 
 
     render() {
-        const images = this.importAll(require.context('./EventImages/', false, /\.(png|jpe?g|svg)$/));
+        const images = this.importAll(require.context('./UpcomingEventImages/', false, /\.(png|jpe?g|svg)$/));
         const cards= this.createCards(images)
-        console.log(cards)
         return (
             <div className="UpcomingEvents">
                 {cards}

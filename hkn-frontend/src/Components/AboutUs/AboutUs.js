@@ -4,6 +4,7 @@ import GROUP from './group.png'
 import TUTOR from './tutoring.png'
 import './AboutUs.scss'
 import UpcomingEvents from './UpcomingEvents'
+import Gallery from './Gallery.js'
 
 export default class AboutUs extends Component {
     render() {
@@ -23,19 +24,19 @@ export default class AboutUs extends Component {
                         About
                     </b><br/>
                     <div className="AboutText">
-                        Founded at the University of Illinois in 1904, HKN consists of students,
-                        alumni, and other professionals who have demonstrated exceptional academic
-                        and professional accomplishments in the electrical and computer engineering
-                        fields. <br /><br />
-                        UCLA's own chapter, the <b>Iota Gamma Chapter</b>, was founded on March 
-                        24, 1984, by Professor Alan Willson. Professor Benjamin Williams serves as our
-                        current advisor. <br /><br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet odio ut 
-                        odio dictum porta. Suspendisse suscipit malesuada erat, fringilla placerat velit 
-                        lacinia id. Nullam in felis id ipsum consectetur efficitur. Nullam sollicitudin 
-                        ex non nulla pellentesque aliquet. Fusce diam quam, sagittis id est sed, sodales 
-                        ultrices diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Donec sit amet auctor nibh, eu condimentum sapien. <br /><br />
+                        HKN stands for Eta Kappa Nu. We are an international Honor Society for Electrical 
+                        and Computer Engineering. HKN at UCLA aims to enable fellow engineering students 
+                        to excel in both personal and professional settings. <br /><br/>
+                        By organizing peer to peer 
+                        tutoring, various workshops, review sessions, and career fairs, HKN wants to 
+                        support and connect our engineering students with the best resources to enable 
+                        them to succeed in academics and to explore their career options. Some of our 
+                        most popular events include course review sessions, company info sessions, 
+                        resume reviews, and professor lunches. <br /><br />
+                        HKN is an invitation only organization. The members of HKN at UCLA are among 
+                        the most outstanding undergraduate Electrical and Computer Engineering students. 
+                        To qualify for induction, the candidate must be top ¼ of the Junior class or 
+                        top ⅓ of the Senior class.
                     </div>
                     <img className="GroupShot" src={GROUP} />
                 </div>    
@@ -61,6 +62,10 @@ export default class AboutUs extends Component {
                         fellow engineering students as much as possible from all aspects.
                     </div>
                     <img src={TUTOR} className="TutoringImage" />
+                </div>
+                <div className="GalleryComponent">
+                    <b className="GalleryTitle">Gallery</b><br /> 
+                    <Gallery className="Gallery"/>
                 </div>
             </div>
         )
