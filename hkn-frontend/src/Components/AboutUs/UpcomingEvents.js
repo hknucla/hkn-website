@@ -42,9 +42,8 @@ export default class UpcomingEvents extends Component {
 
 
     render() {
-        const images = this.importAll(require.context('./EventImages/', false, /\.(png|jpe?g|svg)$/));
+        const images = this.importAll(require.context('./UpcomingEventImages/', false, /\.(png|jpe?g|svg)$/));
         const cards= this.createCards(images)
-        console.log(cards)
         return (
             <div className="UpcomingEvents">
                 {cards}

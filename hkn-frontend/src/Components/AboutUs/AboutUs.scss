@@ -55,7 +55,7 @@
         grid-row-start: 3;
     }
     .GroupShot{
-        margin-top: -50px;
+        margin-top: -5vh;
         grid-column-start: 4;
         width: 100%;
         height: auto;
@@ -101,4 +101,23 @@
         width: 90%;
     }
     
+}
+
+.GalleryComponent{
+    width: 100%;
+    background-color: black;
+    @include titleFont;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 60px 6vh 350px 70px; 
+    .GalleryTitle{
+        grid-row-start: 2;
+        z-index: 1;
+    }
+    .Gallery{
+        margin-left: 5%;
+        margin-right: 5%;
+        grid-row-start: 3;
+        width: 90%;
+    }
 }
