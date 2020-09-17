@@ -3,15 +3,25 @@
   padding: 0;
 }
 
+body{
+    background-color: black;
+}
+
 .header {
   z-index: 4;
   display: flex;
-  height: 100px;
+  width: 102%;
+  height: 80px;
+  left: -5px;
+  top: 0;
+  transition: top 0.6s;
   background-color: white;
+  background:linear-gradient(to bottom, white 40%, transaparent);
+  box-shadow: 0 4px 4px -4px black;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
+  position: fixed;
   .title {
     display: inline-block;
     font-family: 'Roboto Condensed';
@@ -22,7 +32,7 @@
   .links {
     ul li {
       display: inline-block;
-      margin-right: 40px;
+      margin-right: 50px;
       font-family: "Century Gothic", sans-serif;
       font-weight: 100;
       font-size: 17px;
@@ -37,6 +47,16 @@
   }
 }
 
-body{
-  background-color: black;
+.header--hidden{
+    top: -100px;
+}
+
+.headerTop{
+  height: 100px; 
+  margin-top: -150px;
+}
+
+html, body {
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
 }

@@ -19,7 +19,7 @@ export default class AboutUs extends Component {
                     <img className="Royce" src={ROYCE} width='100%' height='auto' />
                 </div>
 
-                <div className="About">
+                <div className="About" id="About">
                     <b className="AboutTitle">
                         About
                     </b><br/>
