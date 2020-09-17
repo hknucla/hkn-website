@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import STUDY from "./study-spot.jpg";
 
 export default class Tutoring extends Component {
     render() {
         return (
-            <div>
-                This is the tutoring page!
+            <div className="Tutoring">
+                <img src={STUDY}/>
             </div>
         )
     }

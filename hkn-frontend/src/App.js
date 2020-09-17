@@ -4,7 +4,6 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import Tutoring from "./Components/Tutoring/Tutoring";
 import MemberPortal from "./Components/MemberPortal/MemberPortal";
 import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MAINPAGE from "./mainpage.jpg";
 import "./App.scss";
 import MAINICON from "./mainIcon.png"
 import TestBank from "./Components/TestBank/TestBank";
