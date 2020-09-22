@@ -36,8 +36,7 @@ export default class Header extends Component {
     const { prevScrollpos } = this.state;
     const currentScrollPos = window.pageYOffset;
     const visible = (prevScrollpos > currentScrollPos) || currentScrollPos<150;
-    console.log(currentScrollPos);
-      this.setState({
+    this.setState({
       prevScrollpos: currentScrollPos,
       visible
     });
@@ -55,7 +54,7 @@ export default class Header extends Component {
             <div className="links">
               <ul>
                 <li><a href="/#About" className="link">About</a></li>
-                <li><Link to="/events" className="link">Events</Link></li>
+                <li><Link to="/events" className="link">Officers</Link></li>
                 <li><Link to="/tutoring" className="link">Tutoring</Link></li>
                 <li><Link to="/testBank" className="link">Test Bank</Link></li>
                 <li><Link to="/member" className="link">Login</Link></li>

@@ -5,11 +5,13 @@ import TUTOR from './tutoring.png'
 import './AboutUs.scss'
 import UpcomingEvents from './UpcomingEvents'
 import Gallery from './Gallery.js'
+import { Link} from "react-router-dom";
 
 export default class AboutUs extends Component {
     render() {
         return (
             <div className="AboutUs">
+                <div className="Cover"/>
                 <div className="ImageContainer">
                     <div className="TextOverlay">
                         UCLA's <br />
@@ -52,14 +54,16 @@ export default class AboutUs extends Component {
                         undergraduate lounge. If you have any questions, please feel free to walk in and talk 
                         to anyone. <br /> <br />
                         Come get help from top students in engineering! 
-                        HKN tutors are all students who qualify as the top ¼ of Junior class and the top 
+                        HKN tutors are all students who qualify as the top 1/4 of Junior class and the top 
                         1/3 of Senior class. We pride ourselves in our academic excellence. 
                         If you have questions about a class, we most likely will have Junior and Senior 
                         students who took the class already to help you. <br /> <br />
                         If you need career advices, 
                         we also have students with internship experiences to help you look over your 
                         resume and answer any questions.  As an organization, we want to support our 
-                        fellow engineering students as much as possible from all aspects.
+                        fellow engineering students as much as possible from all aspects. <br/><br/>
+                        Check out our <b><Link to="/tutoring" className="TutoringLink">Tutoring Page</Link></b> for 
+                        more information.
                     </div>
                     <img src={TUTOR} className="TutoringImage" />
                 </div>

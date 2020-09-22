@@ -1,6 +1,12 @@
 .AboutUs{
     background-color: black;
 }
+.Cover{
+    height: 100px;
+    margin-top: 0px;
+    background-color: white;
+    width: 100%;
+}
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 .ImageContainer{
     width: 100%;
@@ -8,7 +14,6 @@
     background:linear-gradient(to bottom, transparent 40%, black), url("./royce.jpeg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    margin-top: 100px;
     .TextOverlay{
         margin-top: 20%;
         margin-left: 8%;
@@ -25,12 +30,12 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 @mixin titleFont{
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 6vh;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 @mixin textFont{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 18px;
@@ -91,6 +96,13 @@
         grid-row-start: 4;
         grid-column-start: 3;
         grid-column-end: 4;
+        .TutoringLink, :visited{
+            color: white;
+        }
+        .TutoringLink:hover, :active{
+            color: inherit;
+            text-decoration: inherit;
+        }
     }
     .TutoringImage{
         grid-row-start: 2;
