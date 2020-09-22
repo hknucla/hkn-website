@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HEADER from "./tutoring.jpeg";
 import "./Tutoring.scss";
+import TutoringCalendar from './TutoringCalendar';
 import TutorSelect from "./TutorSelect";
 
 
@@ -40,6 +41,7 @@ export default class Tutoring extends Component {
                         What subject are you looking for help in?
                         <TutorSelect/>  
                     </div>
+                    <TutoringCalendar/>
                 </div>
             </div>
         )
