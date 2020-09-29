@@ -80,6 +80,14 @@
     @include titleFont;
 }
 
+.Link, :visited{
+    color: white;
+}
+.Link:hover, :active{
+    color: white;
+    text-decoration: inherit;
+}
+
 .TutoringComponent{
     @include titleFont;
     background-color: black;
@@ -96,13 +104,6 @@
         grid-row-start: 4;
         grid-column-start: 3;
         grid-column-end: 4;
-        .TutoringLink, :visited{
-            color: white;
-        }
-        .TutoringLink:hover, :active{
-            color: inherit;
-            text-decoration: inherit;
-        }
     }
     .TutoringImage{
         grid-row-start: 2;

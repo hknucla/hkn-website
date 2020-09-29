@@ -8,6 +8,7 @@ import "./App.scss";
 import MAINICON from "./mainIcon.png"
 import TestBank from "./Components/TestBank/TestBank";
 import classnames from "classnames";
+import ScrollToTop from "./ScrollToTop";
 
 const Notfound = () => <h1>Route not found</h1>;
 
@@ -46,28 +47,30 @@ export default class Header extends Component {
     return (
       <div className="app">
         <Router>
-          <div className="headerTop"/>
-          <div className={classnames("header", {
-            "header--hidden": !this.state.visible
-          })}>
-            <li><Link to="/"><img src={MAINICON} style={{ height: '75px', width: '300px' }} /></Link></li>
-            <div className="links">
-              <ul>
-                <li><a href="/#About" className="link">About</a></li>
-                <li><Link to="/events" className="link">Officers</Link></li>
-                <li><Link to="/tutoring" className="link">Tutoring</Link></li>
-                <li><Link to="/testBank" className="link">Test Bank</Link></li>
-                <li><Link to="/member" className="link">Login</Link></li>
-              </ul>
+          <ScrollToTop>
+            <div className="headerTop"/>
+            <div className={classnames("header", {
+              "header--hidden": !this.state.visible
+            })}>
+              <li><Link to="/"><img src={MAINICON} style={{ height: '75px', width: '300px' }} /></Link></li>
+              <div className="links">
+                <ul>
+                  <li><a href="/#About" className="link">About</a></li>
+                  <li><Link to="/events" className="link">Officers</Link></li>
+                  <li><Link to="/tutoring" className="link">Tutoring</Link></li>
+                  <li><Link to="/testBank" className="link">Test Bank</Link></li>
+                  <li><Link to="/member" className="link">Login</Link></li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <Switch>
-            <Route path="/events" component={Events} />
-            <Route path="/tutoring" component={Tutoring} />
-            <Route path="/testBank" component={TestBank} />
-            <Route path="/member" component={MemberPortal} />
-            <Route path="" component={AboutUs} />
-          </Switch>
+            <Switch>
+              <Route path="/events" component={Events} />
+              <Route path="/tutoring" component={Tutoring} />
+              <Route path="/testBank" component={TestBank} />
+              <Route path="/member" component={MemberPortal} />
+              <Route path="" component={AboutUs} />
+            </Switch>
+          </ScrollToTop>
         </Router>
       </div>
     );
