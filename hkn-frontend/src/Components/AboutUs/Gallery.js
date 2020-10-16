@@ -18,7 +18,7 @@ export default class Gallery extends Component {
 
 
     render() {
-        const images = this.importAll(require.context('./GalleryImages/', false, /\.(png|jpe?g|svg)$/));
+        const images = this.importAll(require.context('./GalleryImages/', false, /\.(png|jpe?g|JPE?G|svg)$/));
         const cards = this.createCards(images)
         return (
             <div className="Gallery">
