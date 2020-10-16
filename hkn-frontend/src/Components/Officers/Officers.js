@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
 import './Officers.scss'
 
-export default class Events extends Component {
+
+class OfficerCard extends Component {
+    render(){
+        return(
+            <div>
+                {this.props.photo}
+                {this.props.position}
+                {this.props.name}
+                {this.props.email}
+            </div>
+        )
+    }
+}
+
+export default class Officers extends Component {
     render() {
         return (
-            <div className="Events">
-                This is the events page!
+            <div className="Officers">
+                
             </div>
         )
     }

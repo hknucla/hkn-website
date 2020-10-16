@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Events from "./Components/Events/Events";
+import Officers from "./Components/Officers/Officers";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Tutoring from "./Components/Tutoring/Tutoring";
 import MemberPortal from "./Components/MemberPortal/MemberPortal";
@@ -56,7 +56,7 @@ export default class Header extends Component {
               <div className="links">
                 <ul>
                   <li><a href="/#About" className="link">About</a></li>
-                  <li><Link to="/events" className="link">Officers</Link></li>
+                  <li><Link to="/officers" className="link">Officers</Link></li>
                   <li><Link to="/tutoring" className="link">Tutoring</Link></li>
                   <li><Link to="/testBank" className="link">Test Bank</Link></li>
                   <li><Link to="/member" className="link">Login</Link></li>
@@ -64,7 +64,7 @@ export default class Header extends Component {
               </div>
             </div>
             <Switch>
-              <Route path="/events" component={Events} />
+              <Route path="/officers" component={Officers} />
               <Route path="/tutoring" component={Tutoring} />
               <Route path="/testBank" component={TestBank} />
               <Route path="/member" component={MemberPortal} />
