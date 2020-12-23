@@ -74,7 +74,7 @@ export default class TutorSelect extends Component {
                         {this.makeNums(this.getNums(this.state.subjectValue))}
                     </select>
                 </label>
-                <input type="submit" value="Submit" className="Submit"/>
+                <input type="submit" value="Search" className="Submit"/>
             </form>
         );
     }

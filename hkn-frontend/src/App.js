@@ -14,7 +14,7 @@ const Notfound = () => <h1>Route not found</h1>;
 
 export default class Header extends Component {
   constructor(props) {
-    super(props);
+    super(props); 
 
     this.state = {
       prevScrollpos: window.pageYOffset+10,
