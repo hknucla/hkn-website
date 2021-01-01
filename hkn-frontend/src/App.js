@@ -52,7 +52,7 @@ export default class Header extends Component {
             <div className={classnames("header", {
               "header--hidden": !this.state.visible
             })}>
-              <li><Link to="/"><img src={MAINICON} style={{ height: '75px', width: '300px' }} /></Link></li>
+              <li><Link to="/"><img src={MAINICON} className="mainIcon" style={{ height: '75px', width: '300px' }} /></Link></li>
               <div className="links">
                 <ul>
                   <li><a href="/#About" className="link">About</a></li>

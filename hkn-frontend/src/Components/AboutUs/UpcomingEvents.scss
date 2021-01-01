@@ -8,6 +8,16 @@
     background-color: black;
 }
 
+.UpcomingEvents::-webkit-scrollbar{  
+    background-color: black; 
+    height: 9px;
+}
+.UpcomingEvents::-webkit-scrollbar-thumb{  
+    border-radius: 10px;
+    background-color:rgba(255, 255, 255, 0.5);
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 .UpcomingEvent{
     display:inline-block;
@@ -17,6 +27,7 @@
     width: 200px;
     background-color: black;
     margin: 10px;
+    margin-top: 15px;
     color: black;
     transition: all 400ms ease;
     .UpcomingEventImage{
