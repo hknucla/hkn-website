@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Tutoring.scss";
+import TutoringCalendar from "./TutoringCalendar"
 
 export default class TutorSelect extends Component {
     constructor(props) {
@@ -18,6 +19,12 @@ export default class TutorSelect extends Component {
             '101A','101B','102','110','110H','110L','111L','112','113']
     mathNums=['31A', '31B', '32A', '32B', '33A', '33B', '61']
     physNums=['1A', '1B', '1C', '4AL', '4BL']
+
+    tutors={
+        Athya: ['COM SCI 1', 'COM SCI 111'],
+        Kayla: ['MATH 31A', 'PHYSICS 1B'],
+        Nico: ['EC ENGR 102', 'EC ENGR 113']
+    }
 
     getNums(sub) {
         if (sub === 'COM SCI') {
@@ -45,8 +52,17 @@ export default class TutorSelect extends Component {
     }
 
     handleSubmit(event) {
-        alert('You want to be tutored in: ' + this.state.subjectValue + ' ' + this.state.numValue);
         event.preventDefault();
+        const subject=this.state.subjectValue + ' ' + this.state.numValue;
+        // get names that correspond to subject
+        var highlighted=[]
+        for (const[key,value] of Object.entries(this.tutors)){
+            if(value.includes(subject)){
+                highlighted.push(key);
+            }
+        }
+        // send highlighted names to calendar
+        this.calendar.updateHighlighted(highlighted);
     }
 
     makeNums(arr){
@@ -60,22 +76,26 @@ export default class TutorSelect extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className="TutorSelectForm">
-                <label className="Select1">
-                    <select id='subject' value={this.state.subjectValue} onChange={this.handleSubjectChange}>
-                        <option value="COM SCI">COM SCI</option>
-                        <option value="EC ENGR">EC ENGR</option>
-                        <option value="MATH">MATH</option>
-                        <option value="PHYSICS">PHYSICS</option>
-                    </select>
-                </label>
-                <label className="Select2">
-                    <select subject='num' value={this.state.numValue} onChange={this.handleNumChange}>
-                        {this.makeNums(this.getNums(this.state.subjectValue))}
-                    </select>
-                </label>
-                <input type="submit" value="Search" className="Submit"/>
-            </form>
+            <div>
+                <form onSubmit={this.handleSubmit} className="TutorSelectForm">
+                    <label className="Select1">
+                        <select id='subject' value={this.state.subjectValue} onChange={this.handleSubjectChange}>
+                            <option value="COM SCI">COM SCI</option>
+                            <option value="EC ENGR">EC ENGR</option>
+                            <option value="MATH">MATH</option>
+                            <option value="PHYSICS">PHYSICS</option>
+                        </select>
+                    </label>
+                    <label className="Select2">
+                        <select subject='num' value={this.state.numValue} onChange={this.handleNumChange}>
+                            {this.makeNums(this.getNums(this.state.subjectValue))}
+                        </select>
+                    </label>
+                    <input type="submit" value="Search" className="Submit"/>
+                </form>
+                <TutoringCalendar ref={instance => { this.calendar = instance; }} className="TutoringCalendar" />
+
+            </div>
         );
     }
 }

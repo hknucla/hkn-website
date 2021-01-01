@@ -43,7 +43,7 @@ export default class Tutoring extends Component {
                         <TutorSelect/>  
                     </div>
                 </div>
-                <TutoringCalendar className="TutoringCalendar" />
+                <div style={{height: '50px'}}/>
             </div>
         )
     }
