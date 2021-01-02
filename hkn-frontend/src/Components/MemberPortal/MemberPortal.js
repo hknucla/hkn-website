@@ -1,19 +1,16 @@
 import React, { Component } from "react";
-import MemberAgenda from "./MemberAgenda";
-import MemberPoints from "./MemberPoints";
-import Inductee from "./Inductee"
 
 export default class MemberPortal extends Component {
   render() {
     return(
       <div className="MemberPortal">
-        <h1>Member Name</h1>
-        <div className="Boxes">
-          <MemberAgenda />
-          <Inductee/>
-          <MemberPoints/>
-        </div>
-        <div className="tinytext">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div className="stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
       </div>
     );
   }
