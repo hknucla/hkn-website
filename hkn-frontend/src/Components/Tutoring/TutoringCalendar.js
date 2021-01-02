@@ -20,21 +20,21 @@ export default class TutoringCalendar extends Component {
             selectedIntervals: [{
                     uid: 1,
                     start: this.createMoment({ h: 14, m: 0, d: M }),
-                    end: this.createMoment({ h: 14, m: 30, d: M }),
+                    end: this.createMoment({ h: 15, m: 0, d: M }),
                     value: "Kayla, Athya",
                     highlighted: []
                 },
                 {
                     uid: 2,
                     start: this.createMoment({ h: 13, m: 0, d: W }),
-                    end: this.createMoment({ h: 13, m: 30, d: W }),
+                    end: this.createMoment({ h: 14, m: 0, d: W }),
                     value: "Athya, Nico",
                     highlighted: []
                 },
                 {
                     uid: 3,
                     start: this.createMoment({ h: 15, m: 0, d: F }),
-                    end: this.createMoment({ h: 15, m: 30, d: F }),
+                    end: this.createMoment({ h: 16, m: 0, d: F }),
                     value: "Nico, Kayla",
                     highlighted: []
                 },
@@ -70,14 +70,14 @@ export default class TutoringCalendar extends Component {
         return(
             <div className="TutoringCalendar">
                 <WeekCalendar 
-                    scaleUnit={30}
+                    scaleUnit={60}
                     startTime={moment({h: 12, m: 0})}
                     endTime={moment({h: 19, m: 30})}
                     dayFormat='dddd'
                     scaleFormat='h:mm A'
                     firstDay={this.getMonday()}
                     numberOfDays="5"
-                    cellHeight={43}
+                    cellHeight={70}
                     selectedIntervals={this.state.selectedIntervals}
                     eventComponent={TutoringEvent}
                     eventSpacing={0}
