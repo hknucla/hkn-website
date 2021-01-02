@@ -3,6 +3,7 @@ import TESTBANKHEADERIMG from "./testbank.jpg";
 import "./TestBank.scss"
 import { Document, Page, pdfjs } from "react-pdf";
 import TestViewer from "./TestViewer";
+import TestAdder from "./TestAdder";
 
 export default class TestBank extends Component{
 
@@ -21,6 +22,7 @@ export default class TestBank extends Component{
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
                     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
+                <TestAdder/>
                 <TestViewer/>
             </div>
         );
