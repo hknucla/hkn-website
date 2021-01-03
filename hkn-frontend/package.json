@@ -13,7 +13,7 @@
     "react-dom": "^16.13.1",
     "react-pdf": "^4.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.2",
+    "react-scripts": "^3.4.2",
     "react-slick": "^0.27.11",
     "react-split-pane": "^0.1.92",
     "react-week-calendar": "^0.1.3",
