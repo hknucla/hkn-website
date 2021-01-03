@@ -12,10 +12,14 @@
     z-index: 0;
 }
 
-.Gallery::-webkit-scrollbar {
-  display: none;
+.Gallery::-webkit-scrollbar{  
+    background-color: black; 
+    height: 9px;
 }
-
+.Gallery::-webkit-scrollbar-thumb{  
+    border-radius: 10px;
+    background-color:rgba(255, 255, 255, 0.5);
+}
 .GalleryImage{
     width: 300px; 
     max-height: 270px;
