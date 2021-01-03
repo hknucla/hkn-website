@@ -24,7 +24,7 @@ export default class Tutoring extends Component {
                         from our officers and members for lower division math and physics, as well as most
                         upper-division ECE courses. If you have questions about a class in ECE, our members
                         will gladly assist you. Additionally, if you need any career advice, we also have students
-                        with internship experiences who can help you look over your  resume and answer any questions.<br /> <br />
+                        with internship experiences who can help you look over your resume and answer any questions.<br /> <br />
 
                         Peer-to-peer tutoring is offered from Monday to Friday 12PM – 7PM every quarter, Weeks 3 – 9.
                         All tutoring is walk-in based with no reservations required, and as we learn remotely, we can
