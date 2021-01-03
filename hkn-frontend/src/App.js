@@ -70,6 +70,12 @@ export default class Header extends Component {
               <Route path="/member" component={MemberPortal} />
               <Route path="" component={AboutUs} />
             </Switch>
+            <div className = "Footer">
+                <div className = "SocialHandles">
+                    FIND US ON
+                </div>
+
+            </div>
           </ScrollToTop>
         </Router>
       </div>

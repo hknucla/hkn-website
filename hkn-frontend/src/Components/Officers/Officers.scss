@@ -1,6 +1,127 @@
-.Events{
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+.OfficersHeader{
     width: 100%;
-    height: 1000px;
+    height: 5%;
+    background:linear-gradient(to bottom, transparent 20%, black), url("./officermain.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    .OfficersTextOverlay{
+        animation: .7s ease-out 0s 1 slideInFromTop;
+        margin-top: 15%;
+        margin-left: 40%;
+        position: absolute;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 5vw ;
+        text-align: center;
+        color: white;
+        text-shadow: -2px 2px 3px black;
+        z-index: 1;
+    }
+    .OfficersHeaderImage{
+        object-fit: cover;
+        width: 100%;
+        height: 50%;
+        opacity: 0;
+        z-index: 0;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+.Officer{
+    display:inline-block;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    height: 200px;
+    width: 200px;
     background-color: black;
+    margin: 2.5%;
+    color: whitesmoke;
+    .ImageWrapper{
+        position:relative;
+    }
+    .EmailText{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        font-size:150%;
+        color: white;
+        font-family: monospace;
+        font-size: 14px;
+    }
+    .EmailText:hover{
+        color: #5dc3e6;
+    }
+    .EmailOverlay{
+        position:absolute;
+        bottom: 100%;
+        left: -1%;
+        background-color: #0e0e0e;
+        overflow: hidden;
+        width: 100%;
+        height: 0%;
+        transition: .3s ease;
+        opacity: .90;
+    }
+    .ImageWrapper:hover .EmailOverlay {
+        bottom: 0;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .Image{
+        display:block;
+        border-radius: 50%;
+        width: 98%;
+        height: 98%;
+        background-color: white;
+
+        /* wanted to make pictures diamond shape at first but not sure how to layout
+        z-index: 1;
+        grid-column: span 2;
+        max-width: 100%;
+        margin-bottom: -52%;
+        clip-path: polygon(50% 10%, 100% 40%, 50% 80%, 0% 40%);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+         */
+
+    }
+    .DescriptionWrapper{
+        width: 100%;
+        height: 25%;
+        background-color: none;
+        margin-top: -1vw;
+        .Description{
+            margin: .5vw;
+            margin-top: .1vw;
+            text-align: center;
+            .DescriptionBigText{
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@mixin textFont{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
     color: white;
 }
+@mixin titleFont{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+}
+.TitleFont{
+    @include titleFont;
+}
+
