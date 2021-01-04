@@ -42,9 +42,10 @@ export default class AboutUs extends Component {
                         newsletter <b><a href="https://forms.gle/k3vJ33Z24VGQxVXD9" className="Link" target="_blank">here</a></b>.
                     </div>
                     <img className="GroupShot" src={GROUP} />
-                </div>    
+                </div>
+                <br/><br/><br/><br/><br/><br/><br/><br/>
                 <div className="UpcomingEventsComponent">
-                    <b>Upcoming Events</b><br /> 
+                    <b>Upcoming Events</b><br />
                     <UpcomingEvents/>
                 </div>
                 <div className="TutoringComponent">
