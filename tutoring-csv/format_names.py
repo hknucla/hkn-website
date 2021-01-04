@@ -34,9 +34,9 @@ with open('hours.csv', 'r') as csvfile:
             start, end= tuple(row[0].split('-'))
             s_time=int((re.findall('\d+', start))[0])
             e_time=int((re.findall('\d+', end))[0])
-            if 'PM' in start: 
+            if 'PM' in start and s_time!=12: 
                 s_time+=12
-            if 'PM' in end: 
+            if 'PM' in end and e_time!=12: 
                 e_time+=12
 
             interval={}
@@ -50,9 +50,10 @@ with open('hours.csv', 'r') as csvfile:
             count+=1
 
 
-# with open('tutoring_data.js', 'w') as tutoring_data:
-#     tutoring_data.write('export const tutoringData=')
-#     tutoring_data.write(str(intervals).replace('\'',''))
+with open('tutoring_data.js', 'w') as tutoring_data:
+    print("writing")
+    tutoring_data.write('export const tutoringData=')
+    tutoring_data.write(str(intervals).replace('\'','').replace('{uid','\n{uid'))
 
 subjects=[]
 allSubjects={}
@@ -99,25 +100,17 @@ with open('subjects.csv', 'r') as csvfile:
 
                 # add to all subjects
                 if subject not in allSubjects: 
-                    allSubjects[subject]=[]
-                    allSubjects[subject].append(course_num)
+                    allSubjects[subject]={}
+                    allSubjects[subject][course_num]=[]
+                    allSubjects[subject][course_num].append(count) 
                 elif course_num not in allSubjects[subject]:
-                    allSubjects[subject].append(course_num)
-
-                sub_str+=subject+' '+course_num+','
-
-            sub_str=sub_str[0:-1]
-            s={}
-            s['uid']=count 
-            s['subjects']='"'+sub_str+'"'
+                    allSubjects[subject][course_num]=[]
+                    allSubjects[subject][course_num].append(count) 
+                else: 
+                    allSubjects[subject][course_num].append(count)
             
-            subjects.append(s)
             count+=1
 
 with open('subject_data.js', 'w') as subject_data:
     subject_data.write('export const subjectData=')
-    subject_data.write(str(subjects).replace('\'',''))
-
-with open('all_subjects.js', 'w') as all_subjects:
-    all_subjects.write('export const allSubjects=')
-    all_subjects.write(str(allSubjects))
+    subject_data.write(str(allSubjects))

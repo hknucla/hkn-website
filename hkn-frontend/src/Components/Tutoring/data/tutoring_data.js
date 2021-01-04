@@ -1,4 +1,14 @@
-export const tutoringData=[
+import moment from 'moment';
+
+
+const M = 1;
+const T = 2;
+const W = 3;
+const R = 4;
+const F = 5;
+
+
+const tutoringData = [
 {uid: 1, start: this.createMoment({ h: 10, m: 0, d: M}), end: this.createMoment({ h: 11, m: 0, d: M}), value: "Justin Loo, Ali, Ryan, Michelle, Serene", highlighted: []}, 
 {uid: 2, start: this.createMoment({ h: 10, m: 0, d: T}), end: this.createMoment({ h: 11, m: 0, d: T}), value: "Michael, Abdullah, Serene", highlighted: []}, 
 {uid: 3, start: this.createMoment({ h: 10, m: 0, d: W}), end: this.createMoment({ h: 11, m: 0, d: W}), value: "Joseph, Aaron Lim, Gaofang, Aaron Wissing", highlighted: []}, 
@@ -34,3 +44,5 @@ export const tutoringData=[
 {uid: 33, start: this.createMoment({ h: 16, m: 0, d: W}), end: this.createMoment({ h: 17, m: 0, d: W}), value: "Minh, Zhaoyi, Howard, Jeannie", highlighted: []}, 
 {uid: 34, start: this.createMoment({ h: 16, m: 0, d: R}), end: this.createMoment({ h: 17, m: 0, d: R}), value: "Zhaoyi, Zheyi, Christopher", highlighted: []}, 
 {uid: 35, start: this.createMoment({ h: 16, m: 0, d: F}), end: this.createMoment({ h: 17, m: 0, d: F}), value: "Nico, Chester, Christopher", highlighted: []}]
+
+export default tutoringData;

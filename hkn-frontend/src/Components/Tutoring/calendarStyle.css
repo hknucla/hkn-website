@@ -75,7 +75,7 @@
     position: relative;
     width: auto;
     overflow: auto;
-    max-height: 700px
+    max-height: 1000px
 }
 
 .weekCalendar__overlay {
