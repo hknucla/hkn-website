@@ -73,6 +73,16 @@ export default class Header extends Component {
             <div className = "Footer">
                 <div className = "SocialHandles">
                     FIND US ON
+                    <br/>
+                    <a href= "https://discord.com/invite/VeTvr2R">
+                    <img src = {require("./discord.png")} className="Image"/>
+                    </a>
+                    <a href= "https://www.facebook.com/hkn.ucla">
+                    <img src = {require("./facebook.png")} className="Image"/>
+                    </a>
+                    <a href= "https://www.linkedin.com/company/eta-kappa-nu-iota-gamma-chapter-ucla/">
+                    <img src = {require("./linkedin.png")} className="Image"/>
+                    </a>
                 </div>
 
             </div>

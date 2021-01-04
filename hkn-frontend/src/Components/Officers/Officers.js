@@ -3,6 +3,7 @@ import './Officers.scss'
 import HEADER from "./officermain.jpg";
 import OfficersData from "./OfficersData";
 
+{/*Each Officer consists of an image, position, name, and email*/}
 class OfficerCard extends Component {
     render(){
         return(
@@ -10,10 +11,7 @@ class OfficerCard extends Component {
                 <div className="ImageWrapper">
                     <img src = {this.props.imgPath} className="Image" />
                     <div className="EmailOverlay">
-            {/*<div className = "EmailText"> */}
                         <a className = "EmailText" href={`mailto:${this.props.email}`}> {this.props.email} </a>
-        {/*   {this.props.email}
-                        </div> */}
                     </div>
                 </div>
                 <div className="DescriptionWrapper">
@@ -34,14 +32,11 @@ export default class Officers extends Component {
     }
     createCards = (imgPaths) => {
         const cards = []
-        //for (const path of imgPaths) {
         for(let i = 0; i < imgPaths.length; i++)
-            /*let nameExtract = "Bob";
-            let emailExtract = "bob@gmail.com";
-            let positionExtract = "President"
-             */
             cards.push(
-                //basically need to figure out how to extract elements from my path
+                //goes through the # of images in OfficerImages Folder and takes
+                // corresponding entry in OfficerData.js file (just an array) to fill
+                // in the rest of the information
                 <OfficerCard
                     key = {OfficersData[i].id}
                     name = {OfficersData[i].name}
@@ -54,18 +49,30 @@ export default class Officers extends Component {
         return cards
     }
     render() {
+        {/*Get all picture files from officer iamges folder and put information in images*/}
         const images = this.importAll(require.context('./OfficerImages/', false, /\.(png|jpe?g|JPE?G|svg)$/));
         const Officercards = this.createCards(images)
         return (
             <div className="Officers">
+                {/*OfficersHeader contains the picture and "OFFICER" text overlay*/}
                 <div className="OfficersHeader">
                     <div className="OfficersTextOverlay">
                         OFFICERS
                     </div>
                     <img src={HEADER} className="OfficersHeaderImage" />
                 </div>
+                 {/*OfficersBody contains the short description and officer cards*/}
                 <div className="OfficersBody">
+                    <div className="TitleFont2">
+                        <b> Meet our Officers </b>
+                    </div>
+                    <br/>
+                    <div className="BodyText">
+                        Hover over each picture for more details
+                    </div>
+                    <div className="OfficerCards">
                     {Officercards}
+                    </div>
                 </div>
             </div>
         )

@@ -10,9 +10,11 @@
 .OfficersHeader{
     width: 100%;
     height: 5%;
+    /*gradient effect of picture*/
     background:linear-gradient(to bottom, transparent 20%, black), url("./officermain.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
+    /*font styling and the animation of text sliding down from top*/
     .OfficersTextOverlay{
         animation: .7s ease-out 0s 1 slideInFromTop;
         margin-top: 15%;
@@ -25,6 +27,7 @@
         text-shadow: -2px 2px 3px black;
         z-index: 1;
     }
+    /*bg header image formatting*/
     .OfficersHeaderImage{
         object-fit: cover;
         width: 100%;
@@ -32,6 +35,15 @@
         opacity: 0;
         z-index: 0;
     }
+}
+/*flexbox wrapper for officer cards*/
+.OfficerCards
+{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 .Officer{
@@ -41,11 +53,12 @@
     height: 200px;
     width: 200px;
     background-color: black;
-    margin: 2.5%;
+    margin: 50px 25px 25px 50px;
     color: whitesmoke;
     .ImageWrapper{
         position:relative;
     }
+    /*styling of email text*/
     .EmailText{
         position:absolute;
         top:50%;
@@ -56,9 +69,11 @@
         font-family: monospace;
         font-size: 14px;
     }
+    /*change color of email text if mouse hovers over*/
     .EmailText:hover{
         color: #5dc3e6;
     }
+    /*on hover of officer image this will animate/display*/
     .EmailOverlay{
         position:absolute;
         bottom: 100%;
@@ -70,6 +85,7 @@
         transition: .3s ease;
         opacity: .90;
     }
+    /*on hover over image, email overlay displayed*/
     .ImageWrapper:hover .EmailOverlay {
         bottom: 0;
         height: 100%;
@@ -81,18 +97,8 @@
         width: 98%;
         height: 98%;
         background-color: white;
-
-        /* wanted to make pictures diamond shape at first but not sure how to layout
-        z-index: 1;
-        grid-column: span 2;
-        max-width: 100%;
-        margin-bottom: -52%;
-        clip-path: polygon(50% 10%, 100% 40%, 50% 80%, 0% 40%);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-         */
-
     }
+    /*styling for officer position and name*/
     .DescriptionWrapper{
         width: 100%;
         height: 25%;
@@ -107,7 +113,6 @@
             }
         }
     }
-
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
@@ -119,9 +124,15 @@
 @mixin titleFont{
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 40px;
+    font-size: 6vh;
 }
-.TitleFont{
+.BodyText{
+    @include textFont;
+    margin-left: 5%;
+}
+.TitleFont2{
     @include titleFont;
+    margin-left:5%;
+    font-size: 40px;
 }
 
