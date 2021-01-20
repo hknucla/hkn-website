@@ -3,6 +3,7 @@ import Officers from "./Components/Officers/Officers";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Tutoring from "./Components/Tutoring/Tutoring";
 import MemberPortal from "./Components/MemberPortal/MemberPortal";
+import InducteePortal from "./Components/InducteePortal/InducteePortal"
 import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import MAINICON from "./mainIcon.png"
@@ -59,6 +60,7 @@ export default class Header extends Component {
                   <li><Link to="/officers" className="link">Officers</Link></li>
                   <li><Link to="/tutoring" className="link">Tutoring</Link></li>
                   <li><Link to="/testBank" className="link">Test Bank</Link></li>
+                  <li><Link to= "/inductee" className="link">Progress</Link></li>
                   <li><Link to="/member" className="link">Login</Link></li>
                 </ul>
               </div>
@@ -67,6 +69,7 @@ export default class Header extends Component {
               <Route path="/officers" component={Officers} />
               <Route path="/tutoring" component={Tutoring} />
               <Route path="/testBank" component={TestBank} />
+              <Route path="/inductee" component={InducteePortal} />
               <Route path="/member" component={MemberPortal} />
               <Route path="" component={AboutUs} />
             </Switch>

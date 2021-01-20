@@ -13,6 +13,7 @@ const R = 4;
 const F = 5;
 
 export default class TutoringCalendar extends Component {
+    /*
     constructor(props) {
         super(props);
         this.state = {
@@ -79,10 +80,11 @@ export default class TutoringCalendar extends Component {
         const adjust = 1 - today;
         return moment().add(adjust, 'days').startOf('day');
     }
-
+*/
     render(){
         return(
             <div className="TutoringCalendar">
+                {/*
                 <WeekCalendar 
                     scaleUnit={60}
                     startTime={moment({h: 12, m: 0})}
@@ -96,6 +98,7 @@ export default class TutoringCalendar extends Component {
                     eventComponent={TutoringEvent}
                     eventSpacing={0}
                 />
+                */}
             </div>
         )
     };
