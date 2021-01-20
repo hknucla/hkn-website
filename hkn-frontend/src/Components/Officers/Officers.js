@@ -11,14 +11,15 @@ class OfficerCard extends Component {
                 <div className="ImageWrapper">
                     <img src = {this.props.imgPath} className="Image" />
                     <div className="EmailOverlay">
-                        <a className = "EmailText" href={`mailto:${this.props.email}`}> {this.props.email} </a>
+                        <div className= "BioText"> {this.props.bio} </div>
                     </div>
                 </div>
                 <div className="DescriptionWrapper">
                     <br />
                     <div className="Description">
                         <b className="DescriptionBigText"> {this.props.position} </b> <br/>
-                        {this.props.name}
+                        {this.props.name} <br/>
+                        <a className = "EmailText" href={`mailto:${this.props.email}`}> {this.props.email} </a>
                     </div>
                 </div>
             </div>
@@ -43,6 +44,7 @@ export default class Officers extends Component {
                     imgPath = {imgPaths[i]}
                     email = {OfficersData[i].email}
                     position = {OfficersData[i].position}
+                    bio = {OfficersData[i].bio}
                     />
             )
 
