@@ -1,8 +1,9 @@
 
+
 /*import React, { Component } from "react";
-import ProgressBar from 'react-bootstrap/ProgressBar';
-import HEADER from "../Inductee/officermain.jpg";
-/*
+//import ProgressBar from 'react-bootstrap/ProgressBar';
+
+
 class ProgressBar extends Component{
     render(){
         return(
@@ -32,35 +33,40 @@ export default class InducteePortal extends Component {
   }
 }
 */
+
 import React, { Component } from 'react'
 import './InducteePortal.scss'
-import HEADER from "../Officers/officermain.jpg";
-//import ProgressBar from 'react-bootstrap/ProgressBar';
-import styled from 'styled-components';
-import ProgressBar from './ProgressBar/ProgressBar.js';
-const ProgressBarContainer = styled.div`
-width: 300px;
-margin-top:200px;
-`;
+import HEADER from "./night.jpg";
+//import ProgressBar from 'react-bootstrap/ProgressBar'
+
+class ProgressBar extends Component{
+  render(){
+      return(
+    <div className="containerStyles">
+      <div className="fillStyles">
+        <span className="labelStyles">{`${this.props.completed}%`}</span>
+      </div>
+    </div>
+  )
+}
+}
+
 export default class Inductee extends Component {
     render() {
-        {/*Get all picture files from officer iamges folder and put information in images*/}
+        /*Get all picture files from officer iamges folder and put information in images*/
         return (
             <div className="Inductee">
                 {/*InducteeHeader contains the picture and "OFFICER" text overlay*/}
                 <div className="InducteeHeader">
                     <div className="InducteeTextOverlay">
-                        MEMBERS
+                        INDUCTEE
                     </div>
-                    <img src={HEADER} className="InducteeHeaderImage" />  
+                   { <img src={HEADER} className="InducteeHeaderImage" alt="Royce and Powell at night"/>}
                 </div>
-                <div className= "InducteeBody">
-                    <div>
-                      TESTER
-                    </div>
-                    <ProgressBarContainer>
-                      <ProgressBar/>
-                    </ProgressBarContainer>
+                <div className="InducteeBody">
+                  <div className="Progress">
+                    <ProgressBar completed={60} />
+                  </div>
                 </div>
 
             </div>
