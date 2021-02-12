@@ -59,9 +59,9 @@ export default class Header extends Component {
                   <li><a href="/#About" className="link">About</a></li>
                   <li><Link to="/officers" className="link">Officers</Link></li>
                   <li><Link to="/tutoring" className="link">Tutoring</Link></li>
-                  <li><Link to="/testBank" className="link">Test Bank</Link></li>
+                  {/*<li><Link to="/testBank" className="link">Test Bank</Link></li>
                   <li><Link to= "/inductee" className="link">Progress</Link></li>
-                  <li><Link to="/member" className="link">Login</Link></li>
+                  <li><Link to="/member" className="link">Login</Link></li>*/}
                 </ul>
               </div>
             </div>

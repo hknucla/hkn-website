@@ -46,7 +46,10 @@ export default class AboutUs extends Component {
                 <br/><br/><br/><br/><br/><br/><br/><br/>
                 <div className="UpcomingEventsComponent">
                     <b>Upcoming Events</b><br />
-                    <UpcomingEvents/>
+                    {/*<UpcomingEvents/>*/}
+                    <div className = "EventsText"> Sorry, website under construction. Sign up for 
+                    our <b><a href="https://forms.gle/k3vJ33Z24VGQxVXD9" className="Link" target="_blank">newsletter</a></b> for updates on the latest events!
+                    </div>
                 </div>
                 <div className="TutoringComponent">
                     <b className="TutoringTitle">Tutoring</b><br /> 

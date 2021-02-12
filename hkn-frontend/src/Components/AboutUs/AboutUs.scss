@@ -78,14 +78,19 @@
     background-color: black;
     text-align: center;
     @include titleFont;
+
+    .EventsText{
+        margin-top: 2%;
+        @include textFont;
+    }
 }
 
 .Link, :visited{
     color: white;
 }
 .Link:hover, :active{
-    color: white;
-    text-decoration: inherit;
+    color: lightblue;
+    text-decoration: underline;
 }
 
 .TutoringComponent{
